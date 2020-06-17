@@ -1,0 +1,20 @@
+﻿html {
+  scroll-behavior: smooth;
+}
+
+.iconLink {
+  color: inherit !important;
+}
+
+.navbar-material .nav-wrapper .brand-logo img {
+  height: 64px;
+}
+
+.fixed-action-btn {
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.fixed-action-btn:hover {
+  opacity: 1;
+}
