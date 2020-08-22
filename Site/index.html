@@ -1,372 +1,699 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Chris Halfpenny</title>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="Images/favicon.ico" type="Images/favicon.ico">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!--Import materialize.css--> <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <!-- Custom site CSS -->
-    <link href="CSS/site.css" rel="stylesheet" />
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            //// Initialize collapse button
-            //$('.button-collapse').sideNav({
-            //    // Close the nav on link click
-            //    closeOnClick: true
-            //});
-
-            // Scroll to a specified id on the page
-            var scrollToDiv = function (section) {
-                $('html, body').animate({
-                    // Scroll to the section and add an offset equal to the nav size.
-                    scrollTop: $(section).offset().top - $(".nav-wrapper").height()
-                }, 1000);
-            };
-
-            /* All nav link clicks. */
-            $(".aboutSectionLink").click(function () {
-                scrollToDiv("#aboutSection");
-            });
-
-            $(".projectSectionLink").click(function () {
-                scrollToDiv("#projectSection");
-            });
-
-            $(".qualificationSectionLink").click(function () {
-                scrollToDiv("#qualificationSection");
-            });
-
-            $(".contactSectionLink").click(function () {
-                scrollToDiv("#contactSection");
-            });
-
-            $("#currentYear").text(new Date().getFullYear());
-            $('.sidenav').sidenav();
-        });
-    </script>
-    <!--<?php
-    //if “email” variable is filled out, send email
-    if (isset($_REQUEST['email']))  {
-
-    //Email information
-    $admin_email = "halfpenny92@hotmail.com";
-    $email = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $comment = $_REQUEST['message'];
-
-    //send email
-    mail($admin_email, $name, $comment, "From:" . $email);
-
-    //Email response
-    echo "Thank you for contacting us!";
-    }
-    ?>-->
-</head>
-<body>
-    <!-- Navbar content -->
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper blue-grey">
-                <a href="#!" class="aboutSectionLink brand-logo center">
-                    <img src="Images/logo.png" height="64" width="64" />
-                </a>
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li class="homeSectionLink"><a href="#">Home</a></li>
-                    <li class="aboutSectionLink"><a href="#">About</a></li>
-                    <li class="projectSectionLink"><a href="#">Projects</a></li>
-                    <li class="qualificationSectionLink"><a href="#">Qualifications</a></li>
-                    <li class="contactSectionLink"><a href="#">Contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <!-- Mobile/Small side nav -->
-    <ul id="slide-out" class="sidenav grey lighten-3">
-        <li><a class="aboutSectionLink" href="#">Home</a></li>
-        <li><a class="aboutSectionLink" href="#">About</a></li>
-        <li><a class="projectSectionLink" href="#">Projects</a></li>
-        <li><a class="qualificationSectionLink" href="#">Qualifications</a></li>
-        <li><a class="contactSectionLink" href="#">Contact Me</a></li>
-    </ul>
-
-    <div class="content-section">
-        <!-- About section -->
-        <div id="aboutSection" class="parallax-container grey lighten-3" style="height: 300px;">
-            <div class="section no-pad-bot">
-                <div class="container">
-                    <br><br>
-                    <h3 class="header center">About</h3>
-                    <div class="row center">
-                        <div class="col-md-12">
-                            <p>
-                                .Net Developer currently working for Scania GB.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Projects section -->
-        <div id="projectSection" class="container">
-            <div class="section">
-                <div class="row center">
-                    <div class="col s12">
-                        <h3>Projects</h3>
-                    </div>
-                </div>
-                <!--   Icon Section   -->
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="card hoverable small">
-                            <div class="card-image">
-                                <img src="Images/ngtile.png" style="height: 50%">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">ngTile<i class="material-icons right">more_vert</i></span>
-                                <span><a href="https://github.com/furkick/ngTile" target="_blank">Custom directive for AngularJS</a></span>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">ngTile<i class="material-icons right">close</i></span>
-                                <p>Custom directive for AngularJS.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card hoverable small">
-                            <div class="card-image">
-                                <img src="Images/main-screen.png" style="height: 50%">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Vape Calculator<i class="material-icons right">more_vert</i></span>
-                                <span><a href="https://github.com/furkick/Vape-Calculator" target="_blank">ml to grams for accurate juice creation.</a></span>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Vape Calculator<i class="material-icons right">close</i></span>
-                                <p>DIY E-Liquid Calculator for recipes to convert from ml to grams for accurate juice creation.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card hoverable small">
-                            <div class="card-image">
-                                <img src="Images/ntbees.jpg" style="height: 50%" />
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">NT Bees<i class="material-icons right">more_vert</i></span>
-                                <span><a href="http://ntbees.azurewebsites.net/" target="_blank">Esports Player Site</a></span>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">NT Bees<i class="material-icons right">close</i></span>
-                                <p>Custom Bootstrap and Angular JS site for a competitive eSports player. Has a MS Web Api 2 backend.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card hoverable small">
-                            <div class="card-image">
-                                <img src="Images/teacher-sal.png" />
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Teacher Salary App<i class="material-icons right">more_vert</i></span>
-                                <span><a href="https://play.google.com/store/apps/details?id=com.teachersalaryapp" target="_blank">Teacher Salary Android Application</a></span>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Teacher Salary Android Application<i class="material-icons right">close</i></span>
-                                <p>This calculator has been created with teachers in mind. This will breakdown your salary based on four inputs: Yearly Salary Rate, Days Worked per Year, Days worked per Week and Hours Worked per Day.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card hoverable small">
-                            <div class="card-image">
-                                <img src="Images/num-challenge.png" />
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Number Challenge App<i class="material-icons right">more_vert</i></span>
-                                <span><a href="https://play.google.com/store/apps/details?id=com.furkick.numberchallenge" target="_blank">Number Challenge Android Application</a></span>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Number Challenge Android Application<i class="material-icons right">close</i></span>
-                                <p>This is the classic simple number memory game but with a twist. You have lives and it also will become increasingly harder the higher your score is.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card hoverable small">
-                            <div class="card-image">
-                                <img src="Images/num-guess.png" />
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Number Guessing App<i class="material-icons right">more_vert</i></span>
-                                <span><a href="https://play.google.com/store/apps/details?id=com.furkick.numberguess" target="_blank">Number Guessing Android Application</a></span>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Number Guessing Android Application<i class="material-icons right">close</i></span>
-                                <p>This is the classic simple number guessing game but with a twist. You have lives which will be increased upon guessing the correct number. It also will become increasingly harder the higher your score is.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Qualifications section -->
-        <div id="qualificationSection" class="blue-grey lighten-5">
-            <div class="container">
-                <div class="section">
-                    <div class="row center">
-                        <div class="col s12">
-                            <h3>Qualifications & Awards</h3>
-                        </div>
-                    </div>
-                    <div class="row center">
-                        <div class="col-md-12">
-                            <h5>Qualifications</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <table class="responsive-table">
-                                <thead>
-                                    <tr>
-                                        <th>Institute</th>
-                                        <th>Qualification</th>
-                                        <th>Level</th>
-                                        <th>Year Obtained</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>University of Bedfordshire</td>
-                                        <td>Post Graduate Certificate in Education - Computer Science</td>
-                                        <td>Pass Level 4</td>
-                                        <td>2014</td>
-                                    </tr>
-                                    <tr>
-                                        <td>University of Bedfordshire</td>
-                                        <td>Bachelor of Science (B.Sc) - Computer Science</td>
-                                        <td>First</td>
-                                        <td>2013</td>
-                                    </tr>
-                                    <tr>
-                                        <td>University of Bedfordshire</td>
-                                        <td>Foundation degree - Computer Software Engineering</td>
-                                        <td>Pass</td>
-                                        <td>2012</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row center">
-                        <div class="col s12">
-                            <h5>Awards</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <table class="responsive-table">
-                                <thead>
-                                    <tr>
-                                        <th>Awards</th>
-                                        <th>Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>BCS Computer Science Scholarship</td>
-                                        <td>
-                                            Awarded to only 50 candidates at the time of award. Three stage application process consisting of an online test,
-                                            a trial lesson with students at a school chosen by the BCS and a final interview in London.
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact section -->
-        <div id="contactSection" class="parallax-container" style="height: 100%;">
-            <div class="section no-pad-bot">
-                <div class="row center">
-                    <h3 class="header col s12">Contact Me</h3>
-                </div>
-                <!--<form method="post">-->
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4">
-                        <i class="fa fa-user prefix" style="font-size: 1.5em;" aria-hidden="true"></i>
-                        <input placeholder="" id="name" type="text" class="validate">
-                        <label for="name">Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4">
-                        <i class="fa fa-envelope prefix" style="font-size: 1.5em;" aria-hidden="true"></i>
-                        <input placeholder="" id="emailAddress" type="email" class="validate" name="email">
-                        <label for="emailAddress">Email Address</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4">
-                        <i class="fa fa-commenting prefix" style="font-size: 1.5em;" aria-hidden="true"></i>
-                        <textarea placeholder="" id="message" class="materialize-textarea" name="message"></textarea>
-                        <label for="message">Message</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 center">
-                        <input type="submit" class="waves-effect waves-light btn" title="Send">
-                    </div>
-                </div>
-                <!--</form>-->
-            </div>
-        </div>
-    </div>
-    <!-- Footer section -->
-    <footer class="page-footer blue-grey">
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col s6 valign-wrapper">
-                        <div class="col s6"><img src="Images/logo-footer.png" height="43" width="43" /></div>
-                        <div class="col s6">Copyright © <span id="currentYear"></span> - Chris Halfpenny</div>
-                    </div>
-                    <div class="col s6">
-                        <div class="row right">
-                            <div class="col s3">
-                                <a class="iconLink" href="#!"><i class="fa fa-facebook-official" style="font-size: 1.5em;" aria-hidden="true"></i></a>
-                            </div>
-                            <div class="col s3">
-                                <a class="iconLink" href="#!"><i class="fa fa-twitter" style="font-size: 1.5em;" aria-hidden="true"></i></a>
-                            </div>
-                            <div class="col s3">
-                                <a class="iconLink" href="http://github.com/furkick" target="_blank"><i class="fa fa-github" style="font-size: 1.5em;" aria-hidden="true"></i></a>
-                            </div>
-                            <div class="col s3">
-                                <a class="iconLink" href="http://www.linkedin.com/in/chalfpenny" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 1.5em;" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s1 right-align">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Chris Halfpenny</title>
+
+    <!--Let browser know website is optimized for mobile-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+
+    <link rel="icon" href="Images/favicon.ico" type="Images/favicon.ico" />
+
+    <!--Import Google Icon Font-->
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!--Import jQuery before materialize.js-->
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <!-- Custom site CSS -->
+
+    <link href="CSS/site.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //// Initialize collapse button
+
+        //$('.button-collapse').sideNav({
+
+        //    // Close the nav on link click
+
+        //    closeOnClick: true
+
+        //});
+
+        // Scroll to a specified id on the page
+
+        var scrollToDiv = function (section) {
+          $("html, body").animate(
+            {
+              // Scroll to the section and add an offset equal to the nav size.
+
+              scrollTop: $(section).offset().top - $(".nav-wrapper").height(),
+            },
+            1000
+          );
+        };
+
+        /* All nav link clicks. */
+
+        $(".aboutSectionLink").click(function () {
+          scrollToDiv("#aboutSection");
+        });
+
+        $(".projectSectionLink").click(function () {
+          scrollToDiv("#projectSection");
+        });
+
+        $(".qualificationSectionLink").click(function () {
+          scrollToDiv("#qualificationSection");
+        });
+
+        $(".contactSectionLink").click(function () {
+          scrollToDiv("#contactSection");
+        });
+
+        $("#currentYear").text(new Date().getFullYear());
+
+        $(".sidenav").sidenav();
+      });
+    </script>
+
+    <!--<?php
+
+    //if “email” variable is filled out, send email
+
+    if (isset($_REQUEST['email']))  {
+
+
+
+    //Email information
+
+    $admin_email = "halfpenny92@hotmail.com";
+
+    $email = $_REQUEST['email'];
+
+    $name = $_REQUEST['name'];
+
+    $comment = $_REQUEST['message'];
+
+
+
+    //send email
+
+    mail($admin_email, $name, $comment, "From:" . $email);
+
+
+
+    //Email response
+
+    echo "Thank you for contacting us!";
+
+    }
+
+    ?>-->
+  </head>
+
+  <body>
+    <!-- Navbar content -->
+
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper blue-grey">
+          <a href="#!" class="aboutSectionLink brand-logo center">
+            <img src="Images/logo.png" height="64" width="64" />
+          </a>
+
+          <a href="#" data-target="slide-out" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li class="homeSectionLink"><a href="#">Home</a></li>
+
+            <li class="aboutSectionLink"><a href="#">About</a></li>
+
+            <li class="projectSectionLink"><a href="#">Projects</a></li>
+
+            <li class="qualificationSectionLink">
+              <a href="#">Qualifications</a>
+            </li>
+
+            <li class="contactSectionLink"><a href="#">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile/Small side nav -->
+
+    <ul id="slide-out" class="sidenav grey lighten-3">
+      <li><a class="aboutSectionLink" href="#">Home</a></li>
+
+      <li><a class="aboutSectionLink" href="#">About</a></li>
+
+      <li><a class="projectSectionLink" href="#">Projects</a></li>
+
+      <li><a class="qualificationSectionLink" href="#">Qualifications</a></li>
+
+      <li><a class="contactSectionLink" href="#">Contact Me</a></li>
+    </ul>
+
+    <div class="content-section">
+      <!-- About section -->
+
+      <div
+        id="aboutSection"
+        class="parallax-container grey lighten-3"
+        style="height: 300px;"
+      >
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br /><br />
+
+            <h3 class="header center">About</h3>
+
+            <div class="row center">
+              <div class="col-md-12">
+                <p>
+                  .Net Developer working for Scania GB.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects section -->
+
+      <div id="projectSection" class="container">
+        <div class="section">
+          <div class="row center">
+            <div class="col s12">
+              <h3>Projects</h3>
+            </div>
+          </div>
+
+          <!--   Icon Section   -->
+
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="card hoverable small">
+                <div class="card-image">
+                  <img src="Images/ngtile.png" style="height: 50%;" />
+                </div>
+
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"
+                    >ngTile<i class="material-icons right">more_vert</i></span
+                  >
+
+                  <span
+                    ><a href="https://github.com/furkick/ngTile" target="_blank"
+                      >Custom directive for AngularJS</a
+                    ></span
+                  >
+                </div>
+
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >ngTile<i class="material-icons right">close</i></span
+                  >
+
+                  <p>Custom directive for AngularJS.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card hoverable small">
+                <div class="card-image">
+                  <img src="Images/main-screen.png" style="height: 50%;" />
+                </div>
+
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"
+                    >Vape Calculator<i class="material-icons right"
+                      >more_vert</i
+                    ></span
+                  >
+
+                  <span
+                    ><a
+                      href="https://github.com/furkick/Vape-Calculator"
+                      target="_blank"
+                      >ml to grams for accurate juice creation.</a
+                    ></span
+                  >
+                </div>
+
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Vape Calculator<i class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+
+                  <p>
+                    DIY E-Liquid Calculator for recipes to convert from ml to
+                    grams for accurate juice creation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card hoverable small">
+                <div class="card-image">
+                  <img src="Images/ntbees.jpg" style="height: 50%;" />
+                </div>
+
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"
+                    >NT Bees<i class="material-icons right">more_vert</i></span
+                  >
+
+                  <span
+                    ><a href="http://ntbees.azurewebsites.net/" target="_blank"
+                      >Esports Player Site</a
+                    ></span
+                  >
+                </div>
+
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >NT Bees<i class="material-icons right">close</i></span
+                  >
+
+                  <p>
+                    Custom Bootstrap and Angular JS site for a competitive
+                    eSports player. Has a MS Web Api 2 backend.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card hoverable small">
+                <div class="card-image">
+                  <img src="Images/teacher-sal.png" />
+                </div>
+
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"
+                    >Teacher Salary App<i class="material-icons right"
+                      >more_vert</i
+                    ></span
+                  >
+
+                  <span
+                    ><a
+                      href="https://play.google.com/store/apps/details?id=com.teachersalaryapp"
+                      target="_blank"
+                      >Teacher Salary Android Application</a
+                    ></span
+                  >
+                </div>
+
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Teacher Salary Android Application<i
+                      class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+
+                  <p>
+                    This calculator has been created with teachers in mind. This
+                    will breakdown your salary based on four inputs: Yearly
+                    Salary Rate, Days Worked per Year, Days worked per Week and
+                    Hours Worked per Day.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card hoverable small">
+                <div class="card-image">
+                  <img src="Images/num-challenge.png" />
+                </div>
+
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"
+                    >Number Challenge App<i class="material-icons right"
+                      >more_vert</i
+                    ></span
+                  >
+
+                  <span
+                    ><a
+                      href="https://play.google.com/store/apps/details?id=com.furkick.numberchallenge"
+                      target="_blank"
+                      >Number Challenge Android Application</a
+                    ></span
+                  >
+                </div>
+
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Number Challenge Android Application<i
+                      class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+
+                  <p>
+                    This is the classic simple number memory game but with a
+                    twist. You have lives and it also will become increasingly
+                    harder the higher your score is.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card hoverable small">
+                <div class="card-image">
+                  <img src="Images/num-guess.png" />
+                </div>
+
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"
+                    >Number Guessing App<i class="material-icons right"
+                      >more_vert</i
+                    ></span
+                  >
+
+                  <span
+                    ><a
+                      href="https://play.google.com/store/apps/details?id=com.furkick.numberguess"
+                      target="_blank"
+                      >Number Guessing Android Application</a
+                    ></span
+                  >
+                </div>
+
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Number Guessing Android Application<i
+                      class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+
+                  <p>
+                    This is the classic simple number guessing game but with a
+                    twist. You have lives which will be increased upon guessing
+                    the correct number. It also will become increasingly harder
+                    the higher your score is.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qualifications section -->
+
+      <div id="qualificationSection" class="blue-grey lighten-5">
+        <div class="container">
+          <div class="section">
+            <div class="row center">
+              <div class="col s12">
+                <h3>Qualifications & Awards</h3>
+              </div>
+            </div>
+
+            <div class="row center">
+              <div class="col-md-12">
+                <h5>Qualifications</h5>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12">
+                <table class="responsive-table">
+                  <thead>
+                    <tr>
+                      <th>Institute</th>
+
+                      <th>Qualification</th>
+
+                      <th>Level</th>
+
+                      <th>Year Obtained</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>University of Bedfordshire</td>
+
+                      <td>
+                        Post Graduate Certificate in Education - Computer
+                        Science
+                      </td>
+
+                      <td>Pass Level 4</td>
+
+                      <td>2014</td>
+                    </tr>
+
+                    <tr>
+                      <td>University of Bedfordshire</td>
+
+                      <td>Bachelor of Science (B.Sc) - Computer Science</td>
+
+                      <td>First</td>
+
+                      <td>2013</td>
+                    </tr>
+
+                    <tr>
+                      <td>University of Bedfordshire</td>
+
+                      <td>Foundation degree - Computer Software Engineering</td>
+
+                      <td>Pass</td>
+
+                      <td>2012</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row center">
+              <div class="col s12">
+                <h5>Awards</h5>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12">
+                <table class="responsive-table">
+                  <thead>
+                    <tr>
+                      <th>Awards</th>
+
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>BCS Computer Science Scholarship</td>
+
+                      <td>
+                        Awarded to only 50 candidates at the time of award.
+                        Three stage application process consisting of an online
+                        test, a trial lesson with students at a school chosen by
+                        the BCS and a final interview in London.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact section -->
+
+      <div id="contactSection" class="parallax-container" style="height: 100%;">
+        <div class="section no-pad-bot">
+          <div class="row center">
+            <h3 class="header col s12">Contact Me</h3>
+          </div>
+
+          <!--<form method="post">-->
+
+          <div class="row">
+            <div
+              class="input-field col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4"
+            >
+              <i
+                class="fa fa-user prefix"
+                style="font-size: 1.5em;"
+                aria-hidden="true"
+              ></i>
+
+              <input placeholder="" id="name" type="text" class="validate" />
+
+              <label for="name">Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div
+              class="input-field col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4"
+            >
+              <i
+                class="fa fa-envelope prefix"
+                style="font-size: 1.5em;"
+                aria-hidden="true"
+              ></i>
+
+              <input
+                placeholder=""
+                id="emailAddress"
+                type="email"
+                class="validate"
+                name="email"
+              />
+
+              <label for="emailAddress">Email Address</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div
+              class="input-field col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4"
+            >
+              <i
+                class="fa fa-commenting prefix"
+                style="font-size: 1.5em;"
+                aria-hidden="true"
+              ></i>
+
+              <textarea
+                placeholder=""
+                id="message"
+                class="materialize-textarea"
+                name="message"
+              ></textarea>
+
+              <label for="message">Message</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12 center">
+              <input
+                type="submit"
+                class="waves-effect waves-light btn"
+                title="Send"
+              />
+            </div>
+          </div>
+
+          <!--</form>-->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section -->
+
+    <footer class="page-footer blue-grey">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col s6 valign-wrapper">
+              <div class="col s6">
+                <img src="Images/logo-footer.png" height="43" width="43" />
+              </div>
+
+              <div class="col s6">
+                Copyright © <span id="currentYear"></span> - Chris Halfpenny
+              </div>
+            </div>
+
+            <div class="col s6">
+              <div class="row right">
+                <div class="col s3">
+                  <a class="iconLink" href="#!"
+                    ><i
+                      class="fa fa-facebook-official"
+                      style="font-size: 1.5em;"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+
+                <div class="col s3">
+                  <a class="iconLink" href="#!"
+                    ><i
+                      class="fa fa-twitter"
+                      style="font-size: 1.5em;"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+
+                <div class="col s3">
+                  <a
+                    class="iconLink"
+                    href="http://github.com/furkick"
+                    target="_blank"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 1.5em;"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+
+                <div class="col s3">
+                  <a
+                    class="iconLink"
+                    href="http://www.linkedin.com/in/chalfpenny"
+                    target="_blank"
+                    ><i
+                      class="fa fa-linkedin-square"
+                      style="font-size: 1.5em;"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s1 right-align"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
